@@ -12,7 +12,7 @@ class Header extends Component {
                 <Link to='/'>
                     <h2>Home</h2>
                 </Link>
-
+                
                 <button>Sign In</button>
             </div>
         )
