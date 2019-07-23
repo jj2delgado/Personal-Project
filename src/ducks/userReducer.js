@@ -25,7 +25,7 @@ export const logout = () => {
     return { type: LOGOUT, payload: axios.delete('/api/logout')}
 }
 
-export default function(state=initialState, action){
+export default function(state = initialState, action){
     let {type, payload} = action
     switch(type){
         case REGISTER + '_FULFILLED':
@@ -39,5 +39,7 @@ export default function(state=initialState, action){
             //add case for logout
         case LOGOUT + '_FULFILLED':
             return{...state, user: {}, redirect: true, error: false}
+        default:
+            return state
     }
 }

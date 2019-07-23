@@ -4,6 +4,7 @@ const massive = require('massive')
 const session = require('express-session')
 //everything above has been installed
 const uc = require('./controllers/userController')
+const initSession = require('./middleware/initSession')
 
 const {SERVER_PORT, SESSION_SECRET, CONNECTION_STRING} = process.env
 
@@ -22,10 +23,15 @@ app.use(
     })
 )
 
+app.use(initSession)
+
 massive(CONNECTION_STRING).then(db =>
   {  app.listen(SERVER_PORT, () => console.log('Listening on port ', SERVER_PORT))
      app.set('db', db)})
 
+     app.get('/api/test', (req, res) => {
+         res.sendStatus(209)
+     })
 // user endpoints
 app.post('/api/register', uc.register)
 app.post('/api/login', uc.login)

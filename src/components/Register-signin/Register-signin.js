@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {Redirect} from 'react-router-dom'
+import {Redirect, Link} from 'react-router-dom'
 import {register, login} from '../../ducks/userReducer'
+
 
 
 
@@ -48,7 +49,9 @@ class RegisterSignIn extends Component{
                     <input placeholder="Username" value={username_register} name="username_register" onChange={this.handleChange}></input>
                     <input placeholder="Password" value={password_register} name="password_register" onChange={this.handleChange}></input>
                     <input placeholder="Email" value={email} name="email" onChange={this.handleChange}></input>
-                    <button onClick={this.registerUser}>Submit</button>
+                    <button onClick={this.registerUser}>
+                        <Link to='/'>Submit</Link>
+                        </button>
                 </div>
 
                 <div className="Sign-In-Container">
@@ -62,7 +65,9 @@ class RegisterSignIn extends Component{
     }
 }
 
-function mapStateToProps(state){
-    return state.user
-}
-export default connect(mapStateToProps,{register, login})(RegisterSignIn)
+function mapStateToProps(state) {
+    console.log(state);
+    return state.user;
+  }
+
+export default connect(mapStateToProps, {register,login})(RegisterSignIn)

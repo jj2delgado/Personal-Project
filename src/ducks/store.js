@@ -1,5 +1,9 @@
-import {createStore, applyMiddleware} from 'redux'
+import {createStore, applyMiddleware, combineReducers} from 'redux'
 import promiseMiddleware from 'redux-promise-middleware'
-import userReducer from './userReducer.js'
+import userReducer from './userReducer'
 
-export default createStore(userReducer, applyMiddleware(promiseMiddleware))
+const rootReducer = combineReducers({
+    user: userReducer
+})
+
+export default createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__(applyMiddleware(promiseMiddleware)))
