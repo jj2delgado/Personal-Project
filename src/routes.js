@@ -10,6 +10,7 @@ import Office from './components/categories/Office/Office'
 import Outdoor from './components/categories/Outdoor/Outdoor'
 import About from './components/about/about'
 import Contact from './components/contact/contact'
+import RegisterSignIn from './components/Register-signin/Register-signin'
 
 export default (
     <Switch>
@@ -23,5 +24,6 @@ export default (
         <Route path='/categories/outdoor'component={Outdoor} />
         <Route path='/about' component={About} />
         <Route path='/contact' component={Contact} />
+        <Route path='/login' component={RegisterSignIn} />
     </Switch>
 )

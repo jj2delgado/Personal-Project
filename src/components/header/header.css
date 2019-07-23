@@ -1,0 +1,41 @@
+@media(max-width: 425px){
+    .Header{
+        width: 100vw;
+        height: 10vh;
+        background-color: #6B7ABF;
+        display: flex;
+        justify-content: space-around;
+        align-items: center
+    }
+    .Title{
+        color: white;
+    }
+ 
+
+  .menuOff {
+      display: none;
+    
+  }
+  .menuOn{
+      display: flex;
+      flex-direction: column;
+      align-items: center
+  }
+  .Right-Container{
+      background-color: #DCC7AA;
+      width: 100vw;
+      position: absolute;
+      margin-left: -317px
+  }
+  .Right-Container a{
+      font-size: 1.2em;
+      text-decoration: none;
+  }
+  .Home-Link{
+      color: white;
+  }
+  .Cart-Link{
+      color: white;
+  }
+  
+}

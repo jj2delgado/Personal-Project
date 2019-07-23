@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 class Categories extends Component{
     render(){
         return(
-            <div>
+            <div className='Categories-Container'>
                 <h1>Categories</h1>
                 <Link to='/categories/bathroom'>
                     <div>Bathroom</div>

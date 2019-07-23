@@ -8,6 +8,10 @@ class Footer extends Component{
                 <Link to='/about'>
                     <div>About</div>
                 </Link>
+
+                <Link to='/contact'>
+                    <div>Contact Us</div>
+                </Link>
             </div>
         )
     }
