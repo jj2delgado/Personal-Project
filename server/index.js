@@ -3,6 +3,7 @@ const express = require('express')
 const massive = require('massive')
 const session = require('express-session')
 //everything above has been installed
+const uc = require('./controllers/userController')
 
 const {SERVER_PORT, SESSION_SECRET, CONNECTION_STRING} = process.env
 
@@ -14,10 +15,20 @@ app.use(
     session({
         secret: SESSION_SECRET,
         saveUninitialized: true,
-        resave: false
+        resave: false,
+        cookie: {
+            maxAge: 1000 * 60 * 60 * 24 * 7
+        }
     })
 )
 
-massive(CONNECTION_STRING).then(db => app.set('db', db))
+massive(CONNECTION_STRING).then(db =>
+  {  app.listen(SERVER_PORT, () => console.log('Listening on port ', SERVER_PORT))
+     app.set('db', db)})
 
-app.listen(SERVER_PORT, () => console.log('Listening on port ', SERVER_PORT))
+// user endpoints
+app.post('/api/register', uc.register)
+app.post('/api/login', uc.login)
+app.delete('/api/logout', uc.logout)
+
+
