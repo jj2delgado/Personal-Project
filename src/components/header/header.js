@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
+import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
+import {logout} from '../../ducks/userReducer'
 import './header.css'
 
 class Header extends Component {
@@ -9,8 +11,6 @@ class Header extends Component {
         this.state = {
             menuBarOn: false
         }
-
-        
     }
 
 
@@ -18,6 +18,10 @@ class Header extends Component {
         this.setState({
             menuBarOn: !this.state.menuBarOn
         })
+    }
+
+    logoutUser = () => {
+        this.props.logout()
     }
     render(){
         let displayName = "menuOff"
@@ -35,13 +39,16 @@ class Header extends Component {
                         <Link to='/'>
                             <p className='Home-Link'>Home</p>
                         </Link>
-                        <Link to='/cart'>
+                        
+                        {this.props.user.loggedIn ? <button onClick={this.logoutUser}>Logout</button> :
+                        (<div>
+                            <Link to='/login'>
+                                <p className='Sign-In-Link'>Sign In/Register</p>
+                            </Link>
+                            <Link to='/cart'>
                             <p className='Cart-Link'>Cart</p>
-                        </Link>
-
-                        <Link to='/login'>
-                            <p className='Sign-In-Link'>Sign In/Register</p>
-                        </Link>
+                            </Link>
+                        </div>)}
                         
                     </div>
                     </i>
@@ -52,4 +59,9 @@ class Header extends Component {
         )
     }
 }
-export default Header
+
+function mapStateToProps(state){
+    return state.user
+}
+
+export default connect(mapStateToProps, {logout})(Header)

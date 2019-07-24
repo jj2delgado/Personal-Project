@@ -3,7 +3,7 @@ create table USERS(
     name_first text,
     name_last text,
     username text unique not null,
-    password varchar(20) not null,
+    password varchar(70) not null,
     email text
 )
 create table PRODUCTS(
@@ -13,3 +13,9 @@ create table PRODUCTS(
     category text,
     current_price decimal(4,2)
 )
+
+create table LIST(
+id serial primary key,
+user_id integer references USERS(id),
+type text
+);

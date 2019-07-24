@@ -4,6 +4,7 @@ const massive = require('massive')
 const session = require('express-session')
 //everything above has been installed
 const uc = require('./controllers/userController')
+const pc = require('./controllers/productController')
 const initSession = require('./middleware/initSession')
 
 const {SERVER_PORT, SESSION_SECRET, CONNECTION_STRING} = process.env
@@ -37,4 +38,6 @@ app.post('/api/register', uc.register)
 app.post('/api/login', uc.login)
 app.delete('/api/logout', uc.logout)
 
+//product endpoints
+app.get('/api/product/:category', pc.getProduct)
 
