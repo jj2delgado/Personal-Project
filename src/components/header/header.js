@@ -25,7 +25,7 @@ class Header extends Component {
     }
     render(){
         let displayName = "menuOff"
-        {this.state.menuBarOn ? displayName="menuOn" : displayName="menuOff"}
+        this.state.menuBarOn ? displayName="menuOn" : displayName="menuOff"
         
         return(
             <div className="Header">

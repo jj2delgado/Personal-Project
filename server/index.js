@@ -5,6 +5,7 @@ const session = require('express-session')
 //everything above has been installed
 const uc = require('./controllers/userController')
 const pc = require('./controllers/productController')
+const cc = require('./controllers/cartController')
 const initSession = require('./middleware/initSession')
 
 const {SERVER_PORT, SESSION_SECRET, CONNECTION_STRING} = process.env
@@ -40,4 +41,7 @@ app.delete('/api/logout', uc.logout)
 
 //product endpoints
 app.get('/api/product/:category', pc.getProduct)
+
+//cart endpoints
+app.post('/api/add/cart', cc.addToCart)
 

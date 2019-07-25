@@ -16,7 +16,9 @@ module.exports = {
         //encrypts password for safekeeping in our database
         let hash = await bcrypt.hash(password, salt)
         let [user] = await db.create_user([name_first, name_last, username, hash, email])
-        req.session.user = { username: user.username, id: user.id, loggedIn: true}
+        let cartID = await db.create_list([user.id, "cart"])
+        console.log(cartID)
+        req.session.user = { username: user.username, id: user.id, loggedIn: true, cart_id: cartID}
         res.send(req.session.user)
     },
     async login( req, res){
@@ -27,10 +29,13 @@ module.exports = {
         //comparing if user entered correct password
         let result = await bcrypt.compare(password, existingUser.password)
         if (result){
+            let cartID = await db.get_cart(existingUser.id)
+            console.log(cartID)
             req.session.user = {
                 username: existingUser.username,
                 id: existingUser.id,
-                loggedIn: true
+                loggedIn: true,
+                cart_id: cartID
             }
             res.send(req.session.user)
         }

@@ -1,13 +1,15 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {getProduct} from '../../ducks/productReducer'
+import Product from './Product'
 
 class Category extends Component{
     constructor(){
         super()
 
         this.state = {
-            products: []
+            products: [],
+            quantity: 1
         }
     }
     componentDidMount(){
@@ -20,25 +22,15 @@ class Category extends Component{
         }
     }
 
-    addToCart = () => {
-        
+    addCart = (productId, listId) => {
+        this.props.addToCart(productId, listId)
     }
-    addToWishList = () => {
-
-    }
-
     render(){
         console.log(this.props)
         return(
             <div>
                 {this.props.products.product.map(product => (
-                    <div key={product.id}>
-                    <img src={product.img}/>
-                    <h1 className="Product-Title">{product.name}</h1>
-                    <p className="Product-Price">${product.current_price}</p>
-                    <button>Add to Cart</button>
-                    <button>Add to WishList</button>
-                    </div>
+                    <Product key={product.id} {...product}/>
                 ))}
             </div>
         )
@@ -48,7 +40,8 @@ class Category extends Component{
 function mapStateToProps(state){
     console.log(state)
     return{
-       products: state.products
+       products: state.products,
+       user: state.user
     }
 }
 

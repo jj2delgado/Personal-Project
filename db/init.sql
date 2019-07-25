@@ -19,3 +19,10 @@ id serial primary key,
 user_id integer references USERS(id),
 type text
 );
+
+create table LIST_PRODUCTS(
+id serial primary key,
+product_id integer references PRODUCTS(id),
+list_id integer references LIST(id),
+quantity integer
+);
