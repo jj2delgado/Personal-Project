@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
+import {removeFromCart} from '../../ducks/cartReducer'
 
 
 class cartProduct extends Component{
@@ -10,14 +11,19 @@ class cartProduct extends Component{
             editing: false
         }
     }
+
+    deleteFromCart(){
+        
+    }
+
     render(){
-        let {img} = this.props.cart.cart
         console.log(this.props)
         return(
             <div>
-                <img src={img} />
-                <h1></h1>
-                <p></p>
+                <img src={this.props.item.img} alt=""/>
+                <h1>{this.props.item.name}</h1>
+                <p>{this.props.item.current_price}</p>
+                <p>Quantity {this.props.item.quantity}</p>
                 <button>Remove</button>
                 <button>Checkout</button>
 

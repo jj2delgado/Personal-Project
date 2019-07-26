@@ -1,0 +1,1 @@
+delete from LIST_PRODUCTS where product_id = $1;

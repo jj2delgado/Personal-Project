@@ -1,16 +1,17 @@
 import React,{Component} from 'react'
 import {Link} from 'react-router-dom'
+import './footer.css'
 
 class Footer extends Component{
     render(){
         return(
-            <div>
+            <div className="Footer-Container">
                 <Link to='/about'>
-                    <div>About</div>
+                    <div className="About-Link">About</div>
                 </Link>
 
                 <Link to='/contact'>
-                    <div>Contact Us</div>
+                    <div className="Contact-Link">Contact Us</div>
                 </Link>
             </div>
         )

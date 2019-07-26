@@ -10,5 +10,11 @@ module.exports = {
         const db = req.app.get('db')
         let cart = await db.get_cart_by_user(id)
         res.send(cart)
+    },
+    async removeFromCart(req, res){
+        const {id} = req.params
+        const db = req.app.get('db')
+        let newCart = await db.delete_from_cart(id)
+        res.send(newCart)
     }
 }

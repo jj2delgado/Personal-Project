@@ -4,13 +4,6 @@ import {getCart} from '../../ducks/cartReducer'
 import CartProduct from '../cartProduct/CartProduct'
 
 class Cart extends Component{
-    constructor(){
-        super()
-
-        this.state ={
-            cart:[],
-        }
-    }
 
     componentDidMount(){
         console.log(this.props)
@@ -18,13 +11,12 @@ class Cart extends Component{
     }
 
     render(){
-        this.state.cart = this.props.cart.cart[0]
         return(
             <div>
                 <h1>YOUR CART</h1>
                 <div>
                     {this.props.cart.cart.map(item => (
-                        <CartProduct key={item.id} />
+                        <CartProduct key={item.id} item={item}/>
                     ))}
                 </div>
             </div>
