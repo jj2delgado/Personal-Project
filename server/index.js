@@ -44,4 +44,5 @@ app.get('/api/product/:category', pc.getProduct)
 
 //cart endpoints
 app.post('/api/add/cart', cc.addToCart)
+app.get('/api/cart/:id', cc.getCart)
 

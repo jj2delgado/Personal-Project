@@ -26,7 +26,6 @@ class Product extends Component{
         this.setState({quantity:newNum})
     }
     render(){
-        console.log(this.props)
         let {img, name, current_price} = this.props
         return(
             <div>

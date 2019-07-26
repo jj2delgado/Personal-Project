@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Home from './components/home/home'
-import Cart from './components/cart/cart'
+import Cart from './components/cart/Cart'
 // import Bathroom from './components/categories/Bathroom/Bathroom'
 // import Bedroom from './components/categories/Bedroom/Bedroom'
 // import Kitchen from './components/categories/Kitchen/Kitchen'

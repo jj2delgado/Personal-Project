@@ -40,14 +40,15 @@ class Header extends Component {
                             <p className='Home-Link'>Home</p>
                         </Link>
                         
+                        <Link to='/cart'>
+                            <p className='Cart-Link'>Cart</p>
+                        </Link>
                         {this.props.user.loggedIn ? <button onClick={this.logoutUser}>Logout</button> :
                         (<div>
                             <Link to='/login'>
                                 <p className='Sign-In-Link'>Sign In/Register</p>
                             </Link>
-                            <Link to='/cart'>
-                            <p className='Cart-Link'>Cart</p>
-                            </Link>
+                            
                         </div>)}
                         
                     </div>
