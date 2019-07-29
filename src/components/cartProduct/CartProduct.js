@@ -12,8 +12,9 @@ class cartProduct extends Component{
         }
     }
 
-    deleteFromCart(){
-        
+    deleteFromCart = () => {
+        console.log('Hit delete from cart', this.props.item.product_id)
+        this.props.removeFromCart(this.props.item.product_id)
     }
 
     render(){
@@ -24,9 +25,8 @@ class cartProduct extends Component{
                 <h1>{this.props.item.name}</h1>
                 <p>{this.props.item.current_price}</p>
                 <p>Quantity {this.props.item.quantity}</p>
-                <button>Remove</button>
+                <button onClick={() => this.deleteFromCart()}>Remove</button>
                 <button>Checkout</button>
-
             </div>
         )
     }
@@ -39,4 +39,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps)(cartProduct)
+export default connect(mapStateToProps, {removeFromCart})(cartProduct)

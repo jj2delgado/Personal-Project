@@ -22,8 +22,8 @@ export function getCart(user_id){
     }
 }
 
-export function removeFromCart(id){
-    let data = axios.delete(`/api/cart/delete/${id}`).then(res => res.data)
+export function removeFromCart(product_id){
+    let data = axios.delete(`/api/cart/delete/${product_id}`).then(res => res.data)
     return{
         type: DELETE_FROM_CART,
         payload: data

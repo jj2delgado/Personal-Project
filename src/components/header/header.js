@@ -43,7 +43,10 @@ class Header extends Component {
                         <Link to='/cart'>
                             <p className='Cart-Link'>Cart</p>
                         </Link>
-                        {this.props.user.loggedIn ? <button onClick={this.logoutUser}>Logout</button> :
+                        <Link to='/accountSettings'>
+                            <p>Account Settings</p>
+                        </Link>
+                        {this.props.user.loggedIn ? (<button onClick={this.logoutUser}>Logout</button>) :
                         (<div>
                             <Link to='/login'>
                                 <p className='Sign-In-Link'>Sign In/Register</p>

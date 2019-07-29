@@ -4,7 +4,10 @@ class About extends Component{
     render(){
         return(
             <div>
-                <div>You ever hear about Wall Street, Morty? You know what those guys do in their fancy boardrooms? They take their balls and they dip them in cocaine and wipe them all over each other.</div>
+                <h1>About Us</h1>
+                <p>Here at Cohen & Co. we're all about providing great product at affordable prices. We're firm believers in the key to happiness being a better home where you can feel safe.
+                    
+                </p>
             </div>
         )
     }

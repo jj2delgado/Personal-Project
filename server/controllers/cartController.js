@@ -12,9 +12,9 @@ module.exports = {
         res.send(cart)
     },
     async removeFromCart(req, res){
-        const {id} = req.params
+        const {product_id} = req.params
         const db = req.app.get('db')
-        let newCart = await db.delete_from_cart(id)
+        let newCart = await db.delete_from_cart([product_id, req.session.user.id])
         res.send(newCart)
     }
 }

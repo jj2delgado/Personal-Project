@@ -38,6 +38,7 @@ massive(CONNECTION_STRING).then(db =>
 app.post('/api/register', uc.register)
 app.post('/api/login', uc.login)
 app.delete('/api/logout', uc.logout)
+app.put('/api/user/:id', uc.editUser)
 
 //product endpoints
 app.get('/api/product/:category', pc.getProduct)
@@ -45,4 +46,5 @@ app.get('/api/product/:category', pc.getProduct)
 //cart endpoints
 app.post('/api/add/cart', cc.addToCart)
 app.get('/api/cart/:id', cc.getCart)
+app.delete('/api/cart/delete/:product_id', cc.removeFromCart)
 

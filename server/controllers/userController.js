@@ -31,8 +31,12 @@ module.exports = {
         if (result){
             let cartID = await db.get_cart(existingUser.id)
             console.log(cartID)
+            //including all user information below for account settings page
             req.session.user = {
                 username: existingUser.username,
+                name_first: existingUser.name_first,
+                name_last: existingUser.name_last,
+                email: existingUser.email,
                 id: existingUser.id,
                 loggedIn: true,
                 cart_id: cartID
@@ -40,6 +44,13 @@ module.exports = {
             res.send(req.session.user)
         }
         else res.status(401).send('Username or Password incorrect')
+    },
+    async editUser(req, res){
+        let {id} = req.params
+        let {name_first, name_last, email} = req.body
+        const db = req.app.get('db')
+        let result = await db.edit_user([+id, name_first, name_last, email])
+        res.send(result)
     },
     logout(req, res){
         req.session.destroy()
