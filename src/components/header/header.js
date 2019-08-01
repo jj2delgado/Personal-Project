@@ -33,18 +33,22 @@ class Header extends Component {
                 
                 <div className="Dropdown-container" onClick={() => {this.handleMenuToggle()}}>
 
-                    <i className={`material-icons `}>menu
+                    <i className={`material-icons `}>menu</i>
                     <div className={`Right-Container ${displayName}`}>
                         
                         <Link to='/'>
                             <p className='Home-Link'>Home</p>
                         </Link>
                         
+                        
                         <Link to='/cart'>
                             <p className='Cart-Link'>Cart</p>
                         </Link>
                         <Link to='/accountSettings'>
-                            <p>Account Settings</p>
+                            <p className="Account-Settings">Account Settings</p>
+                        </Link>
+                        <Link to='/purchasehistory'>
+                            <p className="Purchase-History-Link">Purchase History</p>
                         </Link>
                         {this.props.user.loggedIn ? (<button onClick={this.logoutUser}>Logout</button>) :
                         (<div>
@@ -55,7 +59,7 @@ class Header extends Component {
                         </div>)}
                         
                     </div>
-                    </i>
+                    
 
                     
                 </div>

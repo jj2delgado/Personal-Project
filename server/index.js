@@ -6,6 +6,7 @@ const session = require('express-session')
 const uc = require('./controllers/userController')
 const pc = require('./controllers/productController')
 const cc = require('./controllers/cartController')
+const sc = require('./controllers/StripeController')
 const initSession = require('./middleware/initSession')
 
 const {SERVER_PORT, SESSION_SECRET, CONNECTION_STRING} = process.env
@@ -48,3 +49,5 @@ app.post('/api/add/cart', cc.addToCart)
 app.get('/api/cart/:id', cc.getCart)
 app.delete('/api/cart/delete/:product_id', cc.removeFromCart)
 
+//stripe endpoint
+app.post('/api/payment/:id', sc.pay)

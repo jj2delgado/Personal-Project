@@ -49,7 +49,7 @@ module.exports = {
         let {id} = req.params
         let {name_first, name_last, email} = req.body
         const db = req.app.get('db')
-        let result = await db.edit_user([+id, name_first, name_last, email])
+     let result = await db.edit_user([+id, name_first, name_last, email])
         res.send(result)
     },
     logout(req, res){

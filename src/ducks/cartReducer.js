@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {ADD_TO_CART, GET_CART, DELETE_FROM_CART} from './actionTypes'
+import {ADD_TO_CART, GET_CART, DELETE_FROM_CART, PLACE_ORDER} from './actionTypes'
 
 const initialState = {
     cart: [],
@@ -30,6 +30,14 @@ export function removeFromCart(product_id){
     }
 }
 
+export function pay(user_id, ts, total){
+    let data = axios.post(`/api/payment/${user_id}`, {ts, total}).then(res => res.data)
+    return{
+        type: PLACE_ORDER,
+        payload: data
+    }
+}
+
 export default function(state = initialState, action){
     let {type, payload} = action
     switch(type){
@@ -44,6 +52,10 @@ export default function(state = initialState, action){
         case DELETE_FROM_CART + '_FULFILLED':
             return{...state, cart: payload, error: false}
         case DELETE_FROM_CART + '_REJECTED':
+            return{...state, error: payload}
+        case PLACE_ORDER + '_FULFILLED':
+            return{...state, cart:payload}
+        case PLACE_ORDER + '_REJECTED':
             return{...state, error: payload}
         default:
             return state

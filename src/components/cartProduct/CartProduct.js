@@ -2,15 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {removeFromCart} from '../../ducks/cartReducer'
 
-
 class cartProduct extends Component{
-    constructor(props){
-        super(props)
-
-        this.state ={
-            editing: false
-        }
-    }
 
     deleteFromCart = () => {
         console.log('Hit delete from cart', this.props.item.product_id)
@@ -26,7 +18,6 @@ class cartProduct extends Component{
                 <p>{this.props.item.current_price}</p>
                 <p>Quantity {this.props.item.quantity}</p>
                 <button onClick={() => this.deleteFromCart()}>Remove</button>
-                <button>Checkout</button>
             </div>
         )
     }

@@ -38,7 +38,6 @@ class RegisterSignIn extends Component{
     render(){
         let {name_first, name_last, username_register, password_register, email, username_login, password_login} = this.state
         let {user} = this.props
-        console.log(user)
         if (user.loggedIn) return <Redirect to='/' />
         return(
             <div className="Account-Container">

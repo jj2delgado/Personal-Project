@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
+import {editUser} from '../../ducks/userReducer'
 
 class AccountSettings extends Component{
     constructor(props){
         super(props)
-        this.state={
+        this.state= {
             firstName: this.props.user.user.name_first,
             lastName: this.props.user.user.name_last,
             newEmail: this.props.user.user.email,
@@ -22,11 +23,19 @@ class AccountSettings extends Component{
     }
 
     editInfo = () => {
+        let {firstName, lastName, newEmail} = this.state
+        this.props.editUser(this.props.user.user.id, firstName, lastName, newEmail)
+        this.flipEdit()
+    }
 
+    componentDidUpdate(prevProps){
+        let {firstName, lastName, newEmail} = prevProps
+        if (firstName !== this.props.user.user.name_first || lastName !== this.props.user.user.name_last || newEmail !== this.props.user.user.email){
+            this.render()
+        }
     }
 
     render(){
-        console.log(this.props)
         let {edit, firstName, lastName, newEmail} = this.state
         let {username, name_first, name_last, email} = this.props.user.user
         return(
@@ -46,7 +55,7 @@ class AccountSettings extends Component{
                     <input type="text" value={newEmail} name="newEmail" onChange={this.handleChange} />
                 </div>
                 
-                <button>Save Changes</button>
+                <button onClick={this.editInfo}>Save Changes</button>
                 <button onClick={this.flipEdit}>Cancel</button>
             </div>
                 ) : (
@@ -73,4 +82,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps)(AccountSettings)
+export default connect(mapStateToProps, {editUser})(AccountSettings)

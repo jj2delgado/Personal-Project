@@ -11,7 +11,7 @@ create table PRODUCTS(
     img text,
     name text,
     category text,
-    current_price decimal(4,2)
+    current_price decimal(7,2)
 )
 
 create table LIST(
@@ -25,4 +25,19 @@ id serial primary key,
 product_id integer references PRODUCTS(id),
 list_id integer references LIST(id),
 quantity integer
+);
+
+create table ORDERS(
+id serial primary key,
+user_id integer references USERS(id),
+ts time,
+total decimal(7,2)
+);
+
+create table order_products(
+id serial primary key,
+order_id integer references ORDERS(id),
+product_id integer references PRODUCTS(id),
+quantity integer,
+price_at_purchase decimal(7,2)
 );

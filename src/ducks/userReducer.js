@@ -43,7 +43,7 @@ export default function(state = initialState, action){
         case LOGIN + '_REJECTED':
             return{...state, error: payload}
         case EDIT_USER + '_FULFILLED':
-            return{...state, user: payload}
+            return{...state, user: payload[0]}
         case EDIT_USER + '_REJECTED':
             return{...state, error: payload}
         case LOGOUT + '_FULFILLED':
