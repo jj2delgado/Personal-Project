@@ -36,6 +36,7 @@ class AccountSettings extends Component{
     }
 
     render(){
+        console.log(this.props)
         let {edit, firstName, lastName, newEmail} = this.state
         let {username, name_first, name_last, email} = this.props.user.user
         return(

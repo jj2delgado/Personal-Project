@@ -30,7 +30,7 @@ quantity integer
 create table ORDERS(
 id serial primary key,
 user_id integer references USERS(id),
-ts time,
+ts date not null default current_date;
 total decimal(7,2)
 );
 

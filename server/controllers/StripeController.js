@@ -1,13 +1,15 @@
-const stripe = require('stripe')(process.env.STRIPE_KEY)
+const stripe = require('stripe')(process.env.REACT_APP_STRIPE_KEY)
 
 module.exports = {
     pay:(req, res) => {
-        // const db = req.app.get('db')
-        const {token:{id}, amount} = req.body
-        console.log(id, amount, stripe)
+        console.log('Req stuff',req.params, req.body)
+        const db = req.app.get('db')
+        const {user_id} = req.params
+        const {token:{id}, total, list_id} = req.body
+        console.log('From stripe controller',user_id, id, total)
         stripe.charges.create(
             {
-                amount: amount,
+                amount: total,
                 currency: 'usd',
                 source: id,
                 description: 'Test Charge'
@@ -19,7 +21,7 @@ module.exports = {
                 } else{
                     console.log('Payment Successful, order placed', charge)
                     //where you can use db function to save inside of db
-                    return res.status(200).send(charge)
+                    db.create_order([user_id, total, list_id]).then(order => res.status(200).send(order))
                 }
             }
         )

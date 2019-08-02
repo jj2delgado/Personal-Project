@@ -30,8 +30,17 @@ export function removeFromCart(product_id){
     }
 }
 
-export function pay(user_id, ts, total){
-    let data = axios.post(`/api/payment/${user_id}`, {ts, total}).then(res => res.data)
+// export function pay(user_id, ts, total){
+//     let data = axios.post(`/api/payment/${user_id}`, {ts, total}).then(res => res.data)
+//     return{
+//         type: PLACE_ORDER,
+//         payload: data
+//     }
+// }
+
+export function createOrder(user_id, total, list_id, token){
+    console.log('reducer token',token)
+    let data = axios.post(`/api/payment/${user_id}`,{total, list_id, token}).then(res => res.data)
     return{
         type: PLACE_ORDER,
         payload: data

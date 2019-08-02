@@ -16,5 +16,18 @@ module.exports = {
         const db = req.app.get('db')
         let newCart = await db.delete_from_cart([product_id, req.session.user.id])
         res.send(newCart)
+    },
+    // async createOrder(req, res){
+    //     const {user_id} = req.params
+    //     const {total, list_id} = req.body
+    //     console.log(user_id, total, list_id)
+    //     let order = await db.create_order([user_id, total, list_id])
+    //     res.send(order)
+    // },
+    async addPurchaseHistory(req, res){
+
     }
+    // async emptyCart(req, res){
+    //     const{}
+    // }
 }

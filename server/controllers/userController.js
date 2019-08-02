@@ -30,7 +30,6 @@ module.exports = {
         let result = await bcrypt.compare(password, existingUser.password)
         if (result){
             let cartID = await db.get_cart(existingUser.id)
-            console.log(cartID)
             //including all user information below for account settings page
             req.session.user = {
                 username: existingUser.username,

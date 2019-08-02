@@ -48,6 +48,7 @@ app.get('/api/product/:category', pc.getProduct)
 app.post('/api/add/cart', cc.addToCart)
 app.get('/api/cart/:id', cc.getCart)
 app.delete('/api/cart/delete/:product_id', cc.removeFromCart)
+// app.post('/api/cart/placeorder/:user_id', cc.createOrder)
 
 //stripe endpoint
-app.post('/api/payment/:id', sc.pay)
+app.post('/api/payment/:user_id', sc.pay)

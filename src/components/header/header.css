@@ -1,4 +1,3 @@
-@media(max-width: 425px){
     .Header{
         width: 100vw;
         height: 10vh;
@@ -83,21 +82,76 @@
   .Sign-In-Link:hover{
       color: #F7C331
   }
+  .Purchase-History-Link:hover{
+      color: #F7C331
+  }
 
-  
-}
-/* .Header{
+@media(min-width: 426px){
+    .Header{
     height: 10vh;
     width: 100vw;
     background-image: linear-gradient(to right, #6B7ABF, #DCC7AA);
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-.Right-Container{
+    }
+    .Right-Container{
     display: flex;
+    height: 0px;
+    width: 500px;
+    justify-content: space-between;
+    margin-left: -750px;
+    margin-top: -8px
+    }
+    .Title{
+        color: white;
+        font-size: 2.5em;
+        margin-left: -50px;
+    }
+    i.material-icons{
+    display: none;
+    }
+    .Home-Link{
+        width: 90px;
+        border: none;
+        border-right: 2px solid white;
+    }
+    .Cart-Link{
+        width: 70px;
+        border: none;
+        border-right: 2px solid white
+    }
+    .Account-Settings{
+        width: 190px;
+        border: none;
+        border-right: 2px solid white
+    }
+    .Sign-In-Link{
+        width: 180px
+    }
+    .Purchase-History-Link{
+        width: 190px;
+        border: none;
+        border-right: 2px solid white
+    }
+    .Home-Link:hover{
+        border-bottom: 2px solid #F7C331;
+    }
+    .Cart-Link:hover{
+        border-bottom: 2px solid #F7C331;
+    }
+    .Account-Settings:hover{
+        border-bottom: 2px solid #F7C331;
+    }
+    .Sign-In-Link:hover{
+        border-bottom: 2px solid #F7C331;
+    }
+    .Purchase-History-Link:hover{
+        border-bottom: 2px solid #F7C331;
+    }
+    .menuOn{
+        width: 500px;
+        display: flex;
+    }
 }
-.Title{
-    color: white;
-    font-size: 2.5em
-} */
+
