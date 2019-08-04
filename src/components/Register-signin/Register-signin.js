@@ -2,9 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {Redirect, Link} from 'react-router-dom'
 import {register, login} from '../../ducks/userReducer'
-
-
-
+import './Register-signin.css'
 
 class RegisterSignIn extends Component{
     constructor(){
@@ -41,6 +39,17 @@ class RegisterSignIn extends Component{
         if (user.loggedIn) return <Redirect to='/' />
         return(
             <div className="Account-Container">
+                <div className="Sign-In-Container">
+                    <div className="Login-Title-Container">
+                    <h1 className="Login-Title">Login</h1>
+                    <div className="underline"></div>
+                    </div>
+                    <p className="Welcome-Message">Welcome Back! Please Login to continue</p>
+                    <input placeholder="Username" value={username_login} name="username_login" onChange={this.handleChange}></input>
+                    <input placeholder="Password" value={password_login} name="password_login" onChange={this.handleChange}></input>
+                    <button className="Login-Button"onClick={this.signInUser}>Login</button>
+                </div>
+
                 <div className="Register-Container">
                     <h1>Don't Have an Account? Sign up!</h1>
                     <input placeholder="First Name" value={name_first} name="name_first" onChange={this.handleChange}></input>
@@ -53,12 +62,7 @@ class RegisterSignIn extends Component{
                         </button>
                 </div>
 
-                <div className="Sign-In-Container">
-                    <h1>Login</h1>
-                    <input placeholder="Username" value={username_login} name="username_login" onChange={this.handleChange}></input>
-                    <input placeholder="Password" value={password_login} name="password_login" onChange={this.handleChange}></input>
-                    <button onClick={this.signInUser}>Login</button>
-                </div>
+                
             </div>
         )
     }

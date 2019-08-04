@@ -1,0 +1,33 @@
+.Login-Title-Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px
+}
+.Login-Title{
+    font-family: 'Unica One', cursive;
+    font-weight: bold;
+    font-size: 3em;
+    color: #F7C331;
+}
+.underline{
+    height: 5px;
+    width: 150px;
+    background: linear-gradient(to right, #F7882F, #F7C331)
+}
+.Welcome-Message{
+    font-family: 'Forum', cursive;
+}
+.Sign-In-Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Register-Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -31,6 +31,9 @@
   .Right-Container a{
       font-size: 1.5em;
       text-decoration: none;
+      font-family: 'Coda', cursive;
+      font-weight: 100;
+  
   }
   .Home-Link{
       color: white;
