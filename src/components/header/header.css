@@ -8,8 +8,9 @@
     }
     .Title{
         color: white;
-        font-size: 1.5em;
-        margin-left: -50px;
+        font-size: 1.8em;
+        font-family: 'Pompiere', cursive;
+        margin-top: 20px;
     }
   .menuOff {
       display: none;
@@ -23,8 +24,9 @@
       background-color: #DCC7AA;
       width: 100vw;
       position: absolute;
-      margin-left: -321px;
-      height: 128px
+      margin-left: -326px;
+      height: 128px;
+      margin-top: 25px
   }
   .Right-Container a{
       font-size: 1.5em;
@@ -69,6 +71,12 @@
       justify-content: center;
       border-bottom: 2px solid;
   }
+  .Logout{
+      border: none;
+      color: white;
+      font-size: 1.5em;
+      text-decoration: none;
+  }
 
   .Home-Link:hover{
       color: #F7C331;
@@ -84,6 +92,19 @@
   }
   .Purchase-History-Link:hover{
       color: #F7C331
+  }
+  .Logout:hover{
+    color: #F7C331;
+  } 
+  .symbol{
+      color:white;
+      font-size:4.5em;
+      font-family: 'Unica One', cursive;
+      
+  }
+  .Title-Container{
+      display: flex;
+      margin-left: -25px
   }
 
 @media(min-width: 426px){

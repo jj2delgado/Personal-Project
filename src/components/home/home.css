@@ -1,0 +1,74 @@
+.Catchphrase-Into{
+    color: #DCC7AA;
+    font-family: 'Staatliches', cursive;
+    font-size:3em
+}
+.First-Home{
+    color: #F7C331;
+    font-family: 'Staatliches', cursive;
+    font-size:3em;
+    margin-left: 8px
+}
+.Catchphrase-Middle{
+    color:#F7882F;
+    font-family: 'Staatliches', cursive;
+    font-size:3em
+}
+.Catchphrase-Last{
+    color: #DCC7AA;
+    font-family: 'Staatliches', cursive;
+    font-size:3em;
+    margin-left: 8px;
+}
+.Last-Home{
+    color:#F7C331;
+    font-family: 'Staatliches', cursive;
+    font-size:3em
+}
+.Separator{
+    display: flex;
+}
+.Second-Separator{
+    display: flex;
+}
+.Hook-Container{
+    display: flex;
+    height: 3vh;
+    margin-top: 15px;
+    justify-content: center;
+}
+.Hook-Container a{
+    color: #6B7ABF;
+}
+.Hook{
+    font-family: 'Lalezar', cursive;
+}
+.Condition{
+    font-family: 'Lalezar', cursive;
+    margin-left: 3px;
+    color:#F7882F;
+}
+.Hook-Second{
+    font-family: 'Lalezar', cursive;
+    margin-left: 3px
+}
+.Second-Register-Link{
+    font-family: 'Lalezar', cursive;
+    text-decoration: none;
+    margin-left: 3px
+}
+.Hook-End{
+    font-family: 'Lalezar', cursive;
+    margin-left: 3px;
+}
+.Intro-Container{
+    display: flex;
+    height: 7vh;
+    justify-content: center;
+}
+.Category-Intro{
+    font-family: 'Staatliches', cursive;
+    font-size: 1.2em;
+    align-items: center;
+    margin-top: 20px;
+}

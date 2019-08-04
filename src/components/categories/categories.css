@@ -1,14 +1,71 @@
-@media(max-width: 425px){
-    .Categories-Container{
-    height:70vh;
+.Categories-Container{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     }
-    .Categories-Container a{
-    height: 100px;
-    width:100px;
-    }
-    .bathroom-image{
-    height: 150px;
-    }
+.Category-Title-Container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100vw
 }
+.Categories-Title{
+    font-family: 'Staatliches', cursive;
+    font-size: 1.5em
+}
+.bathroom-image{
+    height: 200px;
+    width: 150px;
+ }
+ .bathroom-container{
+     margin: 10px
+ }
+ .bedroom-image{
+     height:200px;
+     width: 150px
+ }
+ .bedroom-container{
+     margin:10px
+ }
+ .kitchen-image{
+     height: 200px;
+     width: 150px;
+ }
+ .kitchen-container{
+     margin: 10px
+ }
+ .Links-Container{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around;
+     margin-top: 20px;
+ }
+ .Links-Container a{
+     text-decoration: none;
+     color: black;
+     font-family: 'Coda', cursive;
+     text-align: center;
+ }
+ .livingroom-image{
+     height: 200px;
+    width: 150px;
+ }
+ .livingroom-container{
+     margin: 10px
+ }
+ .office-image{
+     height: 200px;
+     width: 150px;
+ }
+ .office-container{
+     margin: 10px
+ }
+ .outdoor-image{
+     height: 200px;
+     width: 150px;
+ }
+ .outdoor-container{
+     margin:10px
+ }
+ .categories-spacing{
+     height: 5vh
+ }

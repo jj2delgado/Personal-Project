@@ -11,4 +11,11 @@ class PurchaseHistory extends Component{
         )
     }
 }
-export default connect(null)(PurchaseHistory)
+
+function mapStateToProps(state){
+    return{
+        user: state.user
+    }
+}
+
+export default connect(mapStateToProps)(PurchaseHistory)

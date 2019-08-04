@@ -29,7 +29,10 @@ class Header extends Component {
         
         return(
             <div className="Header">
-                <h1 className="Title">Cohen & Co</h1>
+                <div className="Title-Container">
+                <h1 className="symbol">C</h1>
+                <h1 className="Title">ohen & Co</h1>
+                </div>
                 
                 <div className="Dropdown-container" onClick={() => {this.handleMenuToggle()}}>
 
@@ -50,7 +53,7 @@ class Header extends Component {
                         <Link to='/purchasehistory'>
                             <p className="Purchase-History-Link">Purchase History</p>
                         </Link>
-                        {this.props.user.loggedIn ? (<button onClick={this.logoutUser}>Logout</button>) :
+                        {this.props.user.loggedIn ? (<p onClick={this.logoutUser} className="Logout">Logout</p>) :
                         (<div>
                             <Link to='/login'>
                                 <p className='Sign-In-Link'>Sign In/Register</p>
