@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Home from './components/home/home'
-import Cart from './components/cart/Cart'
+import Cart from './components/cart/cart'
 import About from './components/about/about'
 import Contact from './components/contact/contact'
 import RegisterSignIn from './components/Register-signin/Register-signin'
