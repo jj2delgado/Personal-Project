@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {addToCart} from '../../ducks/cartReducer'
+import './Product.css'
 
 class Product extends Component{
     constructor(props){
@@ -26,19 +27,21 @@ class Product extends Component{
         this.setState({quantity:newNum})
     }
     render(){
+        console.log(this.props)
         let {img, name, current_price} = this.props
         return(
-            <div>
-                     <img src={img} alt=""/>
+            <div className="Product-Container">
+                     <img className="Product-Image"src={img} alt=""/>
                      <h1 className="Product-Title">{name}</h1>
                      <p className="Product-Price">${current_price}</p>
-                     <button onClick={() => this.addCart(this.props.id, this.props.user.user.cart_id[0].id, this.state.quantity)}>Add to Cart</button>
+                     <button className="Cart-Button"onClick={() => this.addCart(this.props.id, this.props.user.user.cart_id[0].id, this.state.quantity)}>Add to Cart</button>
                          <div className="quantity-container">
-                        <button onClick={this.incrementQty}>+</button>
-                         <h2>{this.state.quantity}</h2>
-                         <button onClick={this.decrementQty}>-</button>
+                             <h1>Qty.</h1>
+                        <button  className="Increase-Button"onClick={this.incrementQty}>+</button>
+                         <h2 className="Quantity-Display">{this.state.quantity}</h2>
+                         <button className="Decrease-Button"onClick={this.decrementQty}>-</button>
                          </div>
-                     <button>Add to WishList</button>
+                     <button className="Wishlist-Button">Add to WishList</button>
             </div>
         )
     }

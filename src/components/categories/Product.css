@@ -1,0 +1,41 @@
+.Product-Container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px
+}
+.Product-Image{
+    height:200px;
+    width: 150px
+}
+.Cart-Button{
+    border: none;
+    background-color: #6B7A8F;
+    color: white;
+    margin: 5px
+}
+.Increase-Button{
+    border: none;
+    font-size: 1.3em;
+    width: 25px;
+    text-align: center;
+    margin: 5px
+}
+.Decrease-Button{
+    border: none;
+    font-size: 1.3em;
+    width: 25px;
+    text-align: center;
+    margin: 5px
+}
+.Quantity-Display{
+    text-align: center;
+    font-family: 'Unica One', cursive;
+    font-size: 1.3em;
+}
+.Wishlist-Button{
+    border: none;
+    background-color: #F7882F;
+    color: white;
+    margin: 5px
+}

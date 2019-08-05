@@ -18,16 +18,62 @@
 }
 .Welcome-Message{
     font-family: 'Forum', cursive;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.2em
 }
 .Sign-In-Container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 80px
 }
 .Register-Container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 50px
+}
+.Login-Button{
+    border: none;
+    background-color: #687A8F;
+    color: white;
+    height: 25px;
+    width: 50px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.Register-Phrase{
+    margin-bottom: 5px;
+    font-family: 'Forum', cursive;
+    font-size: 1.2em
+}
+.Submit-Button{
+    border: none;
+    background-color: #687A8F;
+    height: 25px;
+    width: 60px;
+    margin-top: 5px
+}
+.Submit-Button a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+.Sign-In-Bottom-Space{
+    height: 18vh;
+}
+.Register-Title{
+    font-family: 'Unica One', cursive;
+    font-weight: bold;
+    font-size: 3em;
+    color: #F7C331;
+}
+.Register-Underline{
+    height: 5px;
+    width: 150px;
+    background: linear-gradient(to right, #F7882F, #F7C331);
+    margin-bottom: 5px
 }

@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {editUser} from '../../ducks/userReducer'
+import './AccountSettings.css'
 
 class AccountSettings extends Component{
     constructor(props){
@@ -43,33 +44,44 @@ class AccountSettings extends Component{
             <div>
             {edit ? (
             <div>
+                <h1 className="Edit-Account-Title">Edit Account Settings Below</h1>
+
+                <div className="Edit-Account-Container">
+
                 <div>
-                    <p>First Name:</p>
+                    <p className="FN-Edit">First Name:</p>
                     <input type="text" value={firstName} name="firstName" onChange={this.handleChange} />
                 </div>
+                
                 <div>
-                    <p>Last Name:</p>
+                    <p className="LN-Edit">Last Name:</p>
                     <input type="text" value={lastName} name="lastName" onChange={this.handleChange} />
                 </div>
                 <div>
-                    <p>Email:</p>
+                    <p className="E-Edit">Email:</p>
                     <input type="text" value={newEmail} name="newEmail" onChange={this.handleChange} />
                 </div>
                 
-                <button onClick={this.editInfo}>Save Changes</button>
-                <button onClick={this.flipEdit}>Cancel</button>
+                <button className="Save-Changes-Button"onClick={this.editInfo}>Save Changes</button>
+                <button className="Cancel-Edit-Button"onClick={this.flipEdit}>Cancel</button>
+                
+                <div className="Edit-Settings-Filler"/>
+
+                </div>
+                
             </div>
                 ) : (
             <div>
-                    <h1>Account Settings</h1>
-                    <h2>Hello {username}!</h2>
-                    <h1>Account Information</h1>
+                    <h1 className="Account-Settings-Title">Account Settings</h1>
+                    <h2 className="Hello-Phrase">Hello {username}!</h2>
+                    <h1 className="Account-Settings-Subtitle">Account Information:</h1>
                 <div className="Account-Info-Container">
-                    <p>First Name: {name_first}</p>
-                    <p>Last Name: {name_last}</p>
-                    <p>Email: {email}</p>
-                    <button onClick={this.flipEdit}>Edit</button>
+                    <p className="FN-Displayer">First Name: {name_first}</p>
+                    <p className="LN-Displayer">Last Name: {name_last}</p>
+                    <p className="E-Displayer">Email: {email}</p>
+                    <button className="Account-Edit-Button" onClick={this.flipEdit}>Edit</button>
                 </div>
+                <div className="Account-Settings-Filler"/>
             </div>)}
             
             </div>

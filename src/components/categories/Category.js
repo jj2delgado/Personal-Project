@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {getProduct} from '../../ducks/productReducer'
 import Product from './Product'
+import './Category.css'
 
 class Category extends Component{
     constructor(){
@@ -29,9 +30,12 @@ class Category extends Component{
         console.log(this.props)
         return(
             <div>
+                <h1 className="Category-Title">{this.props.match.params.category}</h1>
+                <div className="Category-Container">
                 {this.props.products.product.map(product => (
                     <Product key={product.id} {...product}/>
                 ))}
+                </div>
             </div>
         )
     }

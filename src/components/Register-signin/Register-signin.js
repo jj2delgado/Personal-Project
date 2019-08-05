@@ -46,22 +46,25 @@ class RegisterSignIn extends Component{
                     </div>
                     <p className="Welcome-Message">Welcome Back! Please Login to continue</p>
                     <input placeholder="Username" value={username_login} name="username_login" onChange={this.handleChange}></input>
-                    <input placeholder="Password" value={password_login} name="password_login" onChange={this.handleChange}></input>
+                    <input placeholder="Password" value={password_login} name="password_login" onChange={this.handleChange} type="password"></input>
                     <button className="Login-Button"onClick={this.signInUser}>Login</button>
                 </div>
 
                 <div className="Register-Container">
-                    <h1>Don't Have an Account? Sign up!</h1>
+                    <h1 className='Register-Title'>REGISTER</h1>
+                    <div className="Register-Underline"></div>
+                    <h1 className="Register-Phrase"> Don't Have an Account? Sign up! </h1>
                     <input placeholder="First Name" value={name_first} name="name_first" onChange={this.handleChange}></input>
                     <input placeholder="Last Name" value={name_last} name="name_last" onChange={this.handleChange}></input>
                     <input placeholder="Username" value={username_register} name="username_register" onChange={this.handleChange}></input>
-                    <input placeholder="Password" value={password_register} name="password_register" onChange={this.handleChange}></input>
+                    <input placeholder="Password" value={password_register} name="password_register" onChange={this.handleChange} type="password"></input>
                     <input placeholder="Email" value={email} name="email" onChange={this.handleChange}></input>
-                    <button onClick={this.registerUser}>
+                    <button className="Submit-Button" onClick={this.registerUser}>
                         <Link to='/'>Submit</Link>
                         </button>
                 </div>
 
+                <div className="Sign-In-Bottom-Space"/>
                 
             </div>
         )
