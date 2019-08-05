@@ -8,6 +8,7 @@ const pc = require('./controllers/productController')
 const cc = require('./controllers/cartController')
 const sc = require('./controllers/StripeController')
 const initSession = require('./middleware/initSession')
+const path = require('path')
 
 const {SERVER_PORT, SESSION_SECRET, CONNECTION_STRING} = process.env
 
@@ -27,6 +28,12 @@ app.use(
 )
 
 app.use(initSession)
+
+app.use(express.static(__dirname + './../build'))
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, './../build/index.html'))
+})
 
 massive(CONNECTION_STRING).then(db =>
   {  app.listen(SERVER_PORT, () => console.log('Listening on port ', SERVER_PORT))
