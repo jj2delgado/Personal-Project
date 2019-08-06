@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {getProduct} from '../../ducks/productReducer'
 import Product from './Product'
+import Header from '../header/header'
+import Footer from '../footer/footer'
 import './Category.css'
 
 class Category extends Component{
@@ -29,6 +31,8 @@ class Category extends Component{
     render(){
         console.log(this.props)
         return(
+        <div>
+            <Header />
             <div>
                 <h1 className="Category-Title">{this.props.match.params.category}</h1>
                 <div className="Category-Container">
@@ -36,6 +40,8 @@ class Category extends Component{
                     <Product key={product.id} {...product}/>
                 ))}
                 </div>
+            </div>
+            <Footer />
             </div>
         )
     }

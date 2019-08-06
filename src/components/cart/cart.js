@@ -4,6 +4,8 @@ import {getCart,createOrder} from '../../ducks/cartReducer'
 import CartProduct from '../cartProduct/CartProduct'
 import StripeCheckout from 'react-stripe-checkout'
 import {toast} from 'react-toastify'
+import Header from '../header/header'
+import Footer from '../footer/footer'
 import './cart.css'
 require('dotenv').config()
 
@@ -67,6 +69,8 @@ class Cart extends Component{
         }
 
         return(
+            <div>
+                <Header />
             <div className="Cart-Container">
                 <h1 className='Cart-Title'>YOUR CART</h1>
                 <div className="Cart-Title-Underline"></div>
@@ -96,6 +100,8 @@ class Cart extends Component{
                 >
                     {/* <button>Checkout</button> */}
                 </StripeCheckout>
+            </div>
+            <Footer />
             </div>
         )
     }

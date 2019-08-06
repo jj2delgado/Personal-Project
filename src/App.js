@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {HashRouter as Router} from 'react-router-dom'
 import routes from './routes'
-import Header from './components/header/header'
-import Footer from './components/footer/footer'
+// import Header from './components/header/header'
+// import Footer from './components/footer/footer'
 import './reset.css'
 import './App.css';
 
@@ -12,9 +12,9 @@ class App extends Component {
     return (
       <Router>
           <div className="App">
-            <Header />
+            {/* <Header /> */}
             {routes}
-            <Footer />
+            {/* <Footer /> */}
           </div>
       </Router>
       

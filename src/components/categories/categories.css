@@ -69,3 +69,39 @@
  .categories-spacing{
      height: 5vh
  }
+
+ @media(min-width: 426px){
+     .Categories-Title{
+         font-size: 2.8em
+     }
+     .bathroom-image{
+         height: 600px;
+         width: 600px
+     }
+     .bedroom-image{
+         height: 600px;
+         width: 600px
+     }
+     .kitchen-image{
+         height: 600px;
+         width: 600px
+     }
+     .livingroom-image{
+         height: 600px;
+         width: 600px
+     }
+     .office-image{
+         height: 600px;
+         width: 600px
+     }
+     .outdoor-image{
+         height: 600px;
+         width: 600px
+     }
+     .Links-Container a{
+         font-size: 1.5em
+     }
+     .Links-Container a:hover{
+         color: #F7C331;
+     }
+ }

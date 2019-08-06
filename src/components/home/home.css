@@ -1,4 +1,4 @@
-.Catchphrase-Into{
+.Catchphrase-Intro{
     color: #DCC7AA;
     font-family: 'Staatliches', cursive;
     font-size:3em
@@ -23,7 +23,9 @@
 .Last-Home{
     color:#F7C331;
     font-family: 'Staatliches', cursive;
-    font-size:3em
+    font-size:3em;
+    margin-top: 50px;
+    margin-left: -160px
 }
 .Separator{
     display: flex;
@@ -71,4 +73,64 @@
     font-size: 1.2em;
     align-items: center;
     margin-top: 20px;
+}
+@media(min-width: 426px){
+    .Home-Container{
+        background-image: url("https://images.unsplash.com/photo-1503174971373-b1f69850bded?ixlib=rb-1.2.1&auto=format&fit=crop&w=1387&q=80");
+        top: 0px;
+        margin-top: -15px;
+        background-size: cover;
+        height: 900px
+    }
+    .Separator{
+        position: absolute;
+        margin-top: 150px;
+        margin-left: 640px;
+    }
+    .Second-Separator{
+        position: absolute;
+        margin-top: 150px;
+        margin-left: 970px
+    }
+    .Last-Home{
+        margin-left: 5px;
+        margin-top: 0px;
+    }
+    .Hook-Container{
+        position: absolute;
+        margin-top: 920px;
+        margin-left: 685px;
+        font-size: 1.5em;
+    }
+    .Intro-Container{
+        position: absolute;
+        margin-top: 960px;
+        margin-left: 833px;
+        font-size: 1.7em
+    }
+    .Categories-Container{
+        position: absolute;
+        margin-top: 520px
+    }
+    .Catchphrase-Intro{
+        font-size: 3.5em;
+        color: white;
+    }
+    .First-Home{
+        font-size: 3.5em
+    }
+    .Catchphrase-Middle{
+        font-size: 3.5em
+    }
+    .Catchphrase-Last{
+        font-size: 3.5em;
+        color: white;
+    }
+    .Last-Home{
+        font-size: 3.5em
+    }
+    .Footer-Container{
+        position: absolute;
+        margin-top: 1550px
+    }
 }

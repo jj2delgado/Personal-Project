@@ -114,18 +114,22 @@
     .Header{
     height: 10vh;
     width: 100vw;
-    background-image: linear-gradient(to right, #6B7ABF, #DCC7AA);
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: absolute;
+    background-color: transparent
     }
     .Right-Container{
     display: flex;
     height: 0px;
     width: 500px;
     justify-content: space-between;
-    margin-left: -750px;
+    margin-left: -550px;
     margin-top: -8px
+    }
+    .Right-Container a{
+        font-size: 1.2em
     }
     .Title{
         color: white;
@@ -182,6 +186,7 @@
     .Title-Container{
         display: flex;
         flex-direction: row;
+        margin-right: 600px
     }
     .symbol{
         margin-right: 50px

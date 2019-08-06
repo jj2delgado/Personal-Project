@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {Redirect, Link} from 'react-router-dom'
 import {register, login} from '../../ducks/userReducer'
+import Header from '../header/header'
+import Footer from '../footer/footer'
 import './Register-signin.css'
 
 class RegisterSignIn extends Component{
@@ -38,6 +40,8 @@ class RegisterSignIn extends Component{
         let {user} = this.props
         if (user.loggedIn) return <Redirect to='/' />
         return(
+        <div>
+            <Header />
             <div className="Account-Container">
                 <div className="Sign-In-Container">
                     <div className="Login-Title-Container">
@@ -66,6 +70,8 @@ class RegisterSignIn extends Component{
 
                 <div className="Sign-In-Bottom-Space"/>
                 
+            </div>
+            <Footer />
             </div>
         )
     }
