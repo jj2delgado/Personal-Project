@@ -1,0 +1,32 @@
+.CartProduct-Container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.CartProduct-Image{
+    height: 300px;
+    width: 225px
+}
+.CartProduct-Title{
+    font-family: 'Blinker', sans-serif;
+    font-size: 1.2em;
+    margin: 5px
+}
+.CartProduct-Price{
+    font-family: 'Blinker', sans-serif;
+    font-size: 1.2em;
+    margin: 5px
+}
+.CartProduct-Qty{
+    font-family: 'Blinker', sans-serif;
+    font-size: 1.2em;
+    margin: 5px
+}
+.Remove-Button{
+    border: none;
+    background-color: #F7882F;
+    color: white;
+    margin: 5px
+}

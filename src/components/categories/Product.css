@@ -8,6 +8,14 @@
     height:200px;
     width: 150px
 }
+.Product-Title{
+    font-family: 'Blinker', sans-serif;
+    margin: 5px
+}
+.Product-Price{
+    font-family: 'Blinker', sans-serif;
+    margin: 5px
+}
 .Cart-Button{
     border: none;
     background-color: #6B7A8F;

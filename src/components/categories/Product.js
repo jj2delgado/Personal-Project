@@ -39,7 +39,10 @@ class Product extends Component{
                              <h1>Qty.</h1>
                         <button  className="Increase-Button"onClick={this.incrementQty}>+</button>
                          <h2 className="Quantity-Display">{this.state.quantity}</h2>
-                         <button className="Decrease-Button"onClick={this.decrementQty}>-</button>
+
+                         {(this.state.quantity > 1) ? (<button className="Decrease-Button"onClick={this.decrementQty}>-</button>) :
+                         (<button className="Decrease-Button"disabled>-</button>)
+                        }
                          </div>
                      <button className="Wishlist-Button">Add to WishList</button>
             </div>

@@ -4,6 +4,7 @@ import {getCart,createOrder} from '../../ducks/cartReducer'
 import CartProduct from '../cartProduct/CartProduct'
 import StripeCheckout from 'react-stripe-checkout'
 import {toast} from 'react-toastify'
+import './cart.css'
 require('dotenv').config()
 
 toast.configure()
@@ -66,8 +67,9 @@ class Cart extends Component{
         }
 
         return(
-            <div>
-                <h1>YOUR CART</h1>
+            <div className="Cart-Container">
+                <h1 className='Cart-Title'>YOUR CART</h1>
+                <div className="Cart-Title-Underline"></div>
                 <div>
                     {this.props.cart.cart.map(item => (
                         <CartProduct key={item.id} item={item}/>

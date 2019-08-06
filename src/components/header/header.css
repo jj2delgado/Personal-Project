@@ -176,6 +176,16 @@
     .menuOn{
         width: 500px;
         display: flex;
+        flex-direction: row;
+        margin-top: 4px
     }
+    .Title-Container{
+        display: flex;
+        flex-direction: row;
+    }
+    .symbol{
+        margin-right: 50px
+    }
+
 }
 
