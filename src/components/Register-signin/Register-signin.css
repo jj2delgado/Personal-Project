@@ -77,3 +77,67 @@
     background: linear-gradient(to right, #F7882F, #F7C331);
     margin-bottom: 5px
 }
+@media(min-width: 426px){
+    .Header-Container{
+        position: absolute;
+        top: 0px;
+        z-index: 1;
+    }
+    .Account-Container{
+        background-image: url('https://images.unsplash.com/photo-1498462335304-e7263fe3925a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        margin-top: -80px;
+        height: 1000px
+    }
+    .Sign-In-Container{
+       position: absolute;
+       margin-top: 300px;
+       margin-left: 790px
+    }
+    .Register-Container{
+        position: absolute;
+        margin-top: 500px;
+        margin-left: 825px
+    }
+    .Login-Title{
+        font-size: 64px
+    }
+    .underline{
+        width: 200px
+    }
+    .Register-Title{
+        font-size: 64px
+    }
+    .Register-Underline{
+        width: 300px
+    }
+    .Welcome-Message{
+        color: white;
+        font-size: 24px
+    }
+    .Register-Phrase{
+        color: white;
+        font-size: 24px
+    }
+    input{
+        width: 250px;
+        margin: 2px;
+        border: 2px solid darkgrey;
+        outline: none;
+    }
+    input:focus{
+        border: 2px solid #F7C331;
+    }
+    .Login-Button{
+        height: 30px;
+        width: 60px
+    }
+    .Submit-Button{
+        height: 30px;
+        width: 70px
+    }
+    
+
+}

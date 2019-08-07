@@ -36,7 +36,7 @@ class Product extends Component{
                      <p className="Product-Price">${current_price}</p>
                      <button className="Cart-Button"onClick={() => this.addCart(this.props.id, this.props.user.user.cart_id[0].id, this.state.quantity)}>Add to Cart</button>
                          <div className="quantity-container">
-                             <h1>Qty.</h1>
+                             <h1 className="Quantity-Title">Qty.</h1>
                         <button  className="Increase-Button"onClick={this.incrementQty}>+</button>
                          <h2 className="Quantity-Display">{this.state.quantity}</h2>
 

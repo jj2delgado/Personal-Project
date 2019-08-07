@@ -47,3 +47,41 @@
     color: white;
     margin: 5px
 }
+@media(min-width: 426px){
+    .Product-Container{
+        margin-top: 1200px
+    }
+    .Product-Image{
+        height: 300px;
+        width: 300px
+    }
+    .Product-Title{
+        font-size: 1.5em
+    }
+    .Product-Price{
+        font-size: 1.2em
+    }
+    .Cart-Button{
+        height: 40px;
+        width: 120px;
+        font-size: 1em
+    }
+    .Quantity-Display{
+        font-size: 1.5em
+    }
+    .Increase-Button{
+        height: 30px;
+        width: 30px
+    }
+    .Decrease-Button{
+        height: 30px;
+        width: 30px
+    }
+    .Quantity-Title{
+        font-size: 1.2em;
+        margin-left: 5px
+    }
+    .Wishlist-Button{
+        height: 30px;
+    }
+}

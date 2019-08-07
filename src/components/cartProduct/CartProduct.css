@@ -30,3 +30,10 @@
     color: white;
     margin: 5px
 }
+@media(min-width: 426px){
+    .CartProduct-Container{
+        margin-top: 800px;
+        margin-right: 10px;
+        margin-left: 10px 
+    }
+}

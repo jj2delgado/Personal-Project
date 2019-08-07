@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {getProduct} from '../../ducks/productReducer'
 import Product from './Product'
 import Header from '../header/header'
-import Footer from '../footer/footer'
+// import Footer from '../footer/footer'
 import './Category.css'
 
 class Category extends Component{
@@ -32,7 +32,9 @@ class Category extends Component{
         console.log(this.props)
         return(
         <div>
-            <Header />
+        <div className="Category-Header-Container">
+        <Header />
+        </div>
             <div>
                 <h1 className="Category-Title">{this.props.match.params.category}</h1>
                 <div className="Category-Container">
@@ -41,7 +43,6 @@ class Category extends Component{
                 ))}
                 </div>
             </div>
-            <Footer />
             </div>
         )
     }

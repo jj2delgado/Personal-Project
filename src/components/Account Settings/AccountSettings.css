@@ -89,3 +89,47 @@
 .Edit-Settings-Filler{
     height: 37vh;
 }
+@media(min-width: 426px){
+    .Account-Header-Container{
+        position: absolute;
+        top: 0px;
+        z-index: 1;
+    }
+    .AccountSettings-Container{
+        background-image: url('https://images.unsplash.com/photo-1515513263345-cf961d304898?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 110vh;
+        margin-top: -80px
+    }
+    .Account-Settings-Title{
+        color: white;
+        position: absolute;
+        font-size: 2.8em;
+        margin-top: 200px;
+        margin-left: 750px
+    }
+    .Hello-Phrase{
+        color: white;
+        position: absolute;
+        margin-top: 270px;
+    }
+    .Account-Settings-Subtitle{
+        color: white;
+        position: absolute;
+        margin-top: 330px
+    }
+    .Account-Info-Container{
+        position: absolute;
+        margin-top: 380px
+    }
+    .FN-Displayer{
+        color: white;
+    }
+    .LN-Displayer{
+        color: white;
+    }
+    .E-Displayer{
+        color: white;
+    }
+}

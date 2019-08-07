@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {editUser} from '../../ducks/userReducer'
 import Header from '../header/header'
-import Footer from '../footer/footer'
+// import Footer from '../footer/footer'
 import './AccountSettings.css'
 
 class AccountSettings extends Component{
@@ -43,8 +43,10 @@ class AccountSettings extends Component{
         let {edit, firstName, lastName, newEmail} = this.state
         let {username, name_first, name_last, email} = this.props.user.user
         return(
-            <div>
+            <div className="AccountSettings-Container">
+                <div className="Account-Header-Container">
                 <Header />
+                </div>
             {edit ? (
             <div>
                 <h1 className="Edit-Account-Title">Edit Account Settings Below</h1>
@@ -86,7 +88,6 @@ class AccountSettings extends Component{
                 </div>
                 <div className="Account-Settings-Filler"/>
             </div>)}
-            <Footer />
             </div>
         )
     }

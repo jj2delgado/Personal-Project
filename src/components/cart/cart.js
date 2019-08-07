@@ -5,7 +5,7 @@ import CartProduct from '../cartProduct/CartProduct'
 import StripeCheckout from 'react-stripe-checkout'
 import {toast} from 'react-toastify'
 import Header from '../header/header'
-import Footer from '../footer/footer'
+// import Footer from '../footer/footer'
 import './cart.css'
 require('dotenv').config()
 
@@ -74,12 +74,12 @@ class Cart extends Component{
             <div className="Cart-Container">
                 <h1 className='Cart-Title'>YOUR CART</h1>
                 <div className="Cart-Title-Underline"></div>
-                <div>
+                <div className="C-CartProduct-Container">
                     {this.props.cart.cart.map(item => (
                         <CartProduct key={item.id} item={item}/>
                     ))}
                 </div>
-                <div>Total Price ${this.state.total}</div>
+                <div className="Total-Price">Total Price ${this.state.total}</div>
                 <StripeCheckout
                          name='Place Order' //header
                          description='Confirm your payment information below.' //subtitle - beneath header
@@ -98,10 +98,9 @@ class Cart extends Component{
                          shippingAddress = {false} //you can collect their address
                          zipCode
                 >
-                    {/* <button>Checkout</button> */}
+                    <button className="Checkout-Button">Checkout</button>
                 </StripeCheckout>
             </div>
-            <Footer />
             </div>
         )
     }

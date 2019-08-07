@@ -17,3 +17,42 @@
     background: linear-gradient(to right, #F7882F, #F7C331);
     margin-bottom: 50px
 }
+@media(min-width: 426px){
+    .Cart-Container{
+        background-image: url('https://images.unsplash.com/photo-1528399783831-8318d62d10e5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80');
+        height: 800px;
+    }
+    .Cart-Title{
+        color: white;
+        position: absolute;
+        margin-top: 140px;
+        font-size: 4em
+    }
+    .Cart-Title-Underline{
+        display: none;
+    }
+    .C-CartProduct-Container{
+        display: flex;
+        margin: 15px
+    }
+    .Total-Price{
+        position: absolute;
+        margin-top: 1300px;
+        font-family: 'Unica One', cursive;
+        font-size: 2em
+    }
+    .Checkout-Button{
+        position: absolute;
+        margin-top: 130px;
+        margin-bottom: 20px;
+        border: none;
+        background-color: #6B7A8F;
+        color: white;
+        font-family: 'Unica One', cursive;
+        font-size: 2em;
+        margin-left: -60px
+    }
+    .Checkout-Button:hover{
+        color: #F7C331
+    }
+}
